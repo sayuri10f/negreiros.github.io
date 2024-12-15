@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar Código Único</title>
+</head>
+<body>
+    <h1>Actualizar Datos del Estudiante</h1>
+
+    <!-- Formulario para actualizar el código único -->
+    <form action="actualizar_codigo.php" method="POST" enctype="multipart/form-data">
+        <label for="dni">DNI:</label>
+        <input type="text" name="dni" id="dni" required><br><br>
+
+        <label for="codigo_unico">Nuevo Código Único:</label>
+        <input type="text" name="codigo_unico" id="codigo_unico" required><br><br>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" required><br><br>
+
+        <label for="carrera">Carrera:</label>
+        <input type="text" name="carrera" id="carrera" required><br><br>
+
+        <label for="ciclo">Ciclo:</label>
+        <input type="text" name="ciclo" id="ciclo" required><br><br>
+
+        <label for="celular">Celular:</label>
+        <input type="text" name="celular" id="celular" required><br><br>
+
+        <label for="correo">Correo:</label>
+        <input type="email" name="correo" id="correo" required><br><br>
+
+        <label for="foto">Foto (opcional):</label>
+        <input type="file" name="foto" id="foto"><br><br>
+
+        <input type="submit" value="Actualizar Código Único">
+    </form>
+</body>
+</html>

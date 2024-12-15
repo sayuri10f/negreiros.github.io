@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto Luis Negreiros Vega</title>
+    <style>
+        /* Estilo general */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Título de la página al inicio */
+        .title {
+            background-color: #4CAF50; /* Color verde para el encabezado */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 30px;
+            font-weight: bold;
+            text-transform: uppercase; /* Título en mayúsculas */
+        }
+
+        /* Sección de fondo con la imagen */
+        .header {
+            position: relative;
+            height: 100vh;
+            background-image: url('imagenes/fondo.jpeg'); /* Aquí pones la URL de tu imagen */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Cuadro morado centrado */
+        .header-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(128, 0, 128, 0.8); /* Cuadro morado */
+            padding: 50px;
+            text-align: center;
+            border-radius: 10px;
+            color: white;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .header-content h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .header-content p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .header-content a {
+            display: inline-block;
+            background-color: #4CAF50;
+            padding: 15px 30px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .header-content a:hover {
+            background-color: #388e3c;
+        }
+
+        /* Formulario de inicio de sesión */
+        .login-form {
+            margin-top: 20px; /* Separación entre el botón y el formulario */
+            background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro */
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            font-size: 14px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto; /* Centrar el formulario */
+        }
+
+        .login-form h3 {
+            margin-top: 0;
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .login-form label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .login-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            background-color: #f1f1f1;
+        }
+
+        .login-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .login-form button:hover {
+            background-color: #388e3c;
+        }
+
+        /* Media queries para pantallas pequeñas */
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 40px 20px;
+            }
+
+            .header-content h1 {
+                font-size: 30px;
+            }
+
+            .header-content p {
+                font-size: 16px;
+            }
+
+            .header-content a {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Título de la página -->
+    <div class="title">
+        INSTITUTO LUIS NEGREIROS VEGA
+    </div>
+
+    <!-- Sección de la cabecera -->
+    <div class="header">
+        <div class="header-content">
+            <h1>Genera tu Carnet Virtual</h1>
+            <p>¡Con nuestro carnet virtual, olvídate de imprimir y lleva tu identificación digitalmente!</p>
+            <p><strong>Primero regístrate para que inicies sesión</strong></p>
+            <a href="registro.php">Obtén tu Carnet Virtual Ahora</a> <!-- Botón verde -->
+
+            <!-- Formulario de inicio de sesión -->
+            <div class="login-form">
+                <h3>Inicia Sesión</h3>
+                <form action="procesar_login.php" method="POST">
+                    <label for="dni">DNI</label>
+                    <input type="text" id="dni" name="dni" placeholder="Ingresa tu DNI" required>
+                    <button type="submit">Ingresar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
